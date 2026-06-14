@@ -1,8 +1,8 @@
 const {getLanguageById,submitBatch,submitToken} = require("../utils/problemUtility");
 const Problem = require("../Models/problem");
 const User = require("../Models/user");
-const Submission = require("../models/submission");
-const SolutionVideo = require("../models/solutionVideo")
+const Submission = require("../Models/submission");
+const SolutionVideo = require("../Models/solutionVideo")
 
 // source_code:
 // language_id:
