@@ -1,6 +1,8 @@
 const {getLanguageById,submitBatch,submitToken} = require("../utils/problemUtility");
 const Problem = require("../Models/problem");
 const User = require("../Models/user");
+const Submission = require("../models/submission");
+const SolutionVideo = require("../models/solutionVideo")
 
 // source_code:
 // language_id:
@@ -37,7 +39,8 @@ const createProblem = async (req,res)=>{
 
       // Checking the result
       for(const test of testResult){
-        if(test.status_id==4){
+        if(test.status_id !== 3){
+          if(test.status_id==4){
           return res.status(400).send("Wrong Answer");
         }
         if(test.status_id==5){
@@ -51,6 +54,7 @@ const createProblem = async (req,res)=>{
         }
         else {
           return res.status(400).send("Error Occured");
+        }
         }
       }
     }
