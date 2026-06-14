@@ -3,7 +3,7 @@ const User = require("../Models/user");
 const bcrypt = require("bcrypt");
 const jwt = require('jsonwebtoken');
 const redisClient = require('../config/redis');
-// const Submission = require("../Models/submission")
+const Submission = require("../Models/submission")
 
 
 // User registration
